@@ -1,146 +1,276 @@
 /* =========================================================
-   SURYA VIGNESH — PORTFOLIO JAVASCRIPT
-   ========================================================= */
+   SURYA VIGNESH PORTFOLIO
+   SIMPLE + RELIABLE JAVASCRIPT
+========================================================= */
 
 
-/* ================= MOBILE NAVIGATION ================= */
+/* =========================================================
+   COPYRIGHT YEAR
+========================================================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+const year = document.getElementById("year");
 
-if (menuBtn && navMenu) {
+if (year) {
 
-    menuBtn.addEventListener("click", () => {
-
-        navMenu.classList.toggle("active");
-
-        if (navMenu.classList.contains("active")) {
-
-            menuBtn.textContent = "✕";
-
-            menuBtn.setAttribute(
-                "aria-label",
-                "Close navigation menu"
-            );
-
-        } else {
-
-            menuBtn.textContent = "☰";
-
-            menuBtn.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        }
-
-    });
-
-}
-
-
-/* ================= CLOSE MOBILE MENU ================= */
-
-const navLinks = document.querySelectorAll("#navMenu a");
-
-navLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        if (navMenu) {
-            navMenu.classList.remove("active");
-        }
-
-        if (menuBtn) {
-
-            menuBtn.textContent = "☰";
-
-            menuBtn.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        }
-
-    });
-
-});
-
-
-/* ================= COPYRIGHT YEAR ================= */
-
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-
-    yearElement.textContent =
+    year.textContent =
         new Date().getFullYear();
 
 }
 
 
-/* ================= SMOOTH SCROLL ================= */
+/* =========================================================
+   NAVBAR SCROLL
+========================================================= */
 
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-
-    link.addEventListener("click", (event) => {
-
-        const targetId =
-            link.getAttribute("href");
-
-        if (
-            !targetId ||
-            targetId === "#"
-        ) {
-            return;
-        }
-
-        const target =
-            document.querySelector(targetId);
-
-        if (target) {
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-
-    });
-
-});
+const navbar =
+    document.getElementById("navbar");
 
 
-/* ================= SCROLL REVEAL ================= */
+function handleNavbar() {
 
-const revealElements = document.querySelectorAll(
-    ".section-heading, " +
-    ".about-main, " +
-    ".about-stats, " +
-    ".skill-card, " +
-    ".featured-project, " +
-    ".explore-item, " +
-    ".direction-inner, " +
-    ".contact-grid"
+    if (!navbar) return;
+
+    if (window.scrollY > 30) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    handleNavbar,
+    { passive: true }
 );
 
-if ("IntersectionObserver" in window) {
 
-    const revealObserver =
-        new IntersectionObserver(
+handleNavbar();
 
-            (entries, observer) => {
 
-                entries.forEach((entry) => {
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
-                    if (entry.isIntersecting) {
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
-                        entry.target.classList.add(
-                            "visible"
-                        );
+const mobileNav =
+    document.getElementById("mobileNav");
+
+
+if (mobileMenu && mobileNav) {
+
+
+    mobileMenu.addEventListener(
+        "click",
+        function () {
+
+            mobileMenu.classList.toggle("active");
+
+            mobileNav.classList.toggle("open");
+
+        }
+    );
+
+
+    const mobileLinks =
+        mobileNav.querySelectorAll("a");
+
+
+    mobileLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mobileMenu.classList.remove("active");
+
+                    mobileNav.classList.remove("open");
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(
+    function (link) {
+
+        link.addEventListener(
+            "click",
+            function (event) {
+
+                const targetId =
+                    link.getAttribute("href");
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+
+                    return;
+
+                }
+
+
+                const target =
+                    document.querySelector(targetId);
+
+
+                if (!target) {
+
+                    return;
+
+                }
+
+
+                event.preventDefault();
+
+
+                const navbarHeight =
+                    navbar
+                        ? navbar.offsetHeight
+                        : 70;
+
+
+                const targetPosition =
+                    target.getBoundingClientRect().top +
+                    window.scrollY -
+                    navbarHeight;
+
+
+                window.scrollTo({
+
+                    top: targetPosition,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+const desktopLinks =
+    document.querySelectorAll(
+        ".desktop-nav a"
+    );
+
+
+function updateActiveNavigation() {
+
+    let currentSection = "";
+
+
+    sections.forEach(
+        function (section) {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+
+            if (
+                window.scrollY >= sectionTop
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        }
+    );
+
+
+    desktopLinks.forEach(
+        function (link) {
+
+            link.style.color = "";
+
+            const href =
+                link.getAttribute("href");
+
+
+            if (
+                href === "#" + currentSection
+            ) {
+
+                link.style.color =
+                    "var(--white)";
+
+            }
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+);
+
+
+updateActiveNavigation();
+
+
+/* =========================================================
+   SIMPLE REVEAL ANIMATION
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(
+        ".section-title, .about-layout, .skills-grid, .project, .explore-grid, .direction, .contact-grid"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(
+                function (entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.style.opacity =
+                            "1";
+
+                        entry.target.style.transform =
+                            "translateY(0)";
 
                         observer.unobserve(
                             entry.target
@@ -148,255 +278,107 @@ if ("IntersectionObserver" in window) {
 
                     }
 
-                });
-
-            },
-
-            {
-                threshold: 0.12
-            }
-
-        );
-
-
-    revealElements.forEach((element) => {
-
-        element.classList.add("reveal");
-
-        revealObserver.observe(element);
-
-    });
-
-} else {
-
-    revealElements.forEach((element) => {
-
-        element.classList.add("visible");
-
-    });
-
-}
-
-
-/* ================= GITHUB LINKS ================= */
-
-const githubLinks =
-    document.querySelectorAll(
-        'a[href*="github.com"]'
-    );
-
-githubLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        console.log(
-            "Opening GitHub project:",
-            link.href
-        );
-
-    });
-
-});
-
-
-/* ================= EMAIL LINKS ================= */
-
-const emailLinks =
-    document.querySelectorAll(
-        'a[href^="mailto:"]'
-    );
-
-emailLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        console.log(
-            "Opening email:",
-            link.href
-        );
-
-    });
-
-});
-
-
-/* ================= ACTIVE NAVIGATION ================= */
-
-const sections =
-    document.querySelectorAll(
-        "main section[id]"
-    );
-
-const navigationLinks =
-    document.querySelectorAll(
-        "#navMenu a"
-    );
-
-if (
-    "IntersectionObserver" in window &&
-    sections.length > 0
-) {
-
-    const activeObserver =
-        new IntersectionObserver(
-
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        const currentId =
-                            entry.target.getAttribute("id");
-
-                        navigationLinks.forEach((link) => {
-
-                            link.classList.remove(
-                                "active-link"
-                            );
-
-                            if (
-                                link.getAttribute("href") ===
-                                `#${currentId}`
-                            ) {
-
-                                link.classList.add(
-                                    "active-link"
-                                );
-
-                            }
-
-                        });
-
-                    }
-
-                });
-
-            },
-
-            {
-                rootMargin:
-                    "-35% 0px -55% 0px"
-            }
-
-        );
-
-
-    sections.forEach((section) => {
-
-        activeObserver.observe(section);
-
-    });
-
-}
-
-
-/* ================= NAVBAR SCROLL EFFECT ================= */
-
-const header =
-    document.querySelector("header");
-
-if (header) {
-
-    window.addEventListener(
-        "scroll",
-        () => {
-
-            if (window.scrollY > 50) {
-
-                header.classList.add(
-                    "scrolled"
-                );
-
-            } else {
-
-                header.classList.remove(
-                    "scrolled"
-                );
-
-            }
-
-        },
-        { passive: true }
-    );
-
-}
-
-
-/* ================= PROJECT LINK CHECK ================= */
-
-const projectLinks =
-    document.querySelectorAll(
-        'a[href*="SmartTourism"]'
-    );
-
-projectLinks.forEach((link) => {
-
-    link.addEventListener("click", () => {
-
-        console.log(
-            "Opening Smart Tourism project:"
-        );
-
-        console.log(
-            "https://github.com/suryavignesh010/SmartTourism"
-        );
-
-    });
-
-});
-
-
-/* ================= KEYBOARD ACCESSIBILITY ================= */
-
-document.addEventListener("keydown", (event) => {
-
-    if (
-        event.key === "Escape" &&
-        navMenu &&
-        navMenu.classList.contains("active")
-    ) {
-
-        navMenu.classList.remove("active");
-
-        if (menuBtn) {
-
-            menuBtn.textContent = "☰";
-
-            menuBtn.setAttribute(
-                "aria-label",
-                "Open navigation menu"
+                }
             );
 
+        },
+        {
+            threshold: 0.08
         }
-
-    }
-
-});
-
-
-/* ================= PAGE LOADED ================= */
-
-window.addEventListener("load", () => {
-
-    document.body.classList.add(
-        "page-loaded"
     );
 
-});
+
+revealElements.forEach(
+    function (element) {
+
+        element.style.opacity = "0";
+
+        element.style.transform =
+            "translateY(25px)";
+
+        element.style.transition =
+            "opacity .8s ease, transform .8s ease";
+
+        observer.observe(element);
+
+    }
+);
 
 
-/* ================= CONSOLE MESSAGE ================= */
+/* =========================================================
+   PROJECT VISUAL MOUSE EFFECT
+========================================================= */
+
+const project =
+    document.querySelector(".project");
+
+
+if (
+    project &&
+    window.matchMedia(
+        "(pointer:fine)"
+    ).matches
+) {
+
+
+    project.addEventListener(
+        "mousemove",
+        function (event) {
+
+            const rect =
+                project.getBoundingClientRect();
+
+
+            const x =
+                (
+                    event.clientX -
+                    rect.left
+                ) /
+                rect.width -
+                0.5;
+
+
+            const y =
+                (
+                    event.clientY -
+                    rect.top
+                ) /
+                rect.height -
+                0.5;
+
+
+            project.style.transform =
+                `
+                perspective(1400px)
+                rotateX(${y * -0.35}deg)
+                rotateY(${x * 0.35}deg)
+                `;
+
+        }
+    );
+
+
+    project.addEventListener(
+        "mouseleave",
+        function () {
+
+            project.style.transform =
+                "perspective(1400px) rotateX(0deg) rotateY(0deg)";
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CONSOLE
+========================================================= */
 
 console.log(
-    "%cSurya Vignesh Portfolio",
-    "font-size:20px;font-weight:bold;"
+    "Surya Vignesh | ECE • AI • Computing"
 );
 
 console.log(
-    "ECE • AI • Computer Vision • Linux • HPC • GPU Computing"
-);
-
-console.log(
-    "GitHub: https://github.com/suryavignesh010/SmartTourism"
+    "Portfolio loaded successfully."
 );
