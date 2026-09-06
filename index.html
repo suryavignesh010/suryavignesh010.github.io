@@ -1,532 +1,1170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Surya Vignesh | ECE • AI • Computing</title>
 
-    <meta name="description" content="Surya Vignesh — Electronics and Communication Engineering student exploring AI, Computer Vision, Linux, HPC and GPU Computing.">
-    <meta name="author" content="Surya Vignesh">
+    <meta
+        name="description"
+        content="Surya Vignesh — Electronics and Communication Engineering student exploring AI, Computer Vision, Linux, HPC and GPU Computing."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container nav-container">
 
-            <a href="#home" class="logo">SV.</a>
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
 
-            <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#exploring">Exploring</a>
-                <a href="#contact">Contact</a>
-            </nav>
+<div class="bg-grid"></div>
+
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<div class="noise"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-inner">
+
+        <a href="#home" class="brand">
+            SV<span>.</span>
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#exploring">Exploring</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+            type="button"
+        >
+
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#exploring">Exploring</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+
+            <div class="status">
+
+                <span class="status-light"></span>
+
+                ECE STUDENT • BUILDING &amp; LEARNING
+
+            </div>
+
+
+            <h1>
+
+                <span class="hello">HELLO, I'M</span>
+
+                <span class="first-name">Surya</span>
+
+                <span class="last-name">Vignesh.</span>
+
+            </h1>
+
+
+            <div class="hero-role">
+
+                Electronics &amp; Communication Engineering Student
+
+            </div>
+
+
+            <p class="hero-description">
+
+                Exploring AI, Computer Vision and advanced computing while building practical solutions through code, projects and continuous learning.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a href="#projects" class="button button-main">
+
+                    View Projects
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a href="#contact" class="button button-outline">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+
+            <div class="social-links">
+
+                <a
+                    href="https://github.com/suryavignesh010"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub <span>↗</span>
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/suryavignesh010/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn <span>↗</span>
+                </a>
+
+
+                <a href="mailto:suryavignesh010@gmail.com">
+
+                    Email <span>↗</span>
+
+                </a>
+
+            </div>
 
         </div>
-    </header>
 
 
-    <!-- HERO -->
-    <main>
 
-        <section class="hero" id="home">
-            <div class="container hero-container">
+        <!-- RIGHT -->
 
-                <div class="hero-content">
+        <div class="focus-wrapper">
 
-                    <div class="status">
-                        <span class="status-dot"></span>
-                        ECE STUDENT • BUILDING & LEARNING
+
+            <div class="focus-number">
+
+                01 — CURRENT FOCUS
+
+            </div>
+
+
+            <div class="focus-card">
+
+
+                <div class="focus-top">
+
+                    <div class="focus-label">
+
+                        CURRENT FOCUS
+
                     </div>
 
-                    <p class="hero-small">HELLO, I'M</p>
 
-                    <h1>
-                        Surya<br>
-                        <span>Vignesh.</span>
-                    </h1>
+                    <div class="focus-symbol">
 
-                    <h2>
-                        Electronics & Communication Engineering
-                        <span>Student</span>
-                    </h2>
-
-                    <p class="hero-description">
-                        Exploring AI, Computer Vision and advanced computing
-                        while building practical solutions through code,
-                        projects and continuous learning.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            View Projects
-                        </a>
-
-                        <a href="#contact" class="btn btn-secondary">
-                            Contact Me
-                        </a>
-                    </div>
-
-                    <div class="hero-links">
-
-                        <a
-                            href="https://github.com/suryavignesh010/Smart-Tourism"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub ↗
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/suryavignesh010/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            LinkedIn ↗
-                        </a>
-
-                        <a href="mailto:suryavignesh010@gmail.com">
-                            Email ↗
-                        </a>
+                        +
 
                     </div>
 
                 </div>
 
 
-                <div class="hero-card">
+                <h2>
 
-                    <div class="card-label">
-                        CURRENT FOCUS
+                    AI <span>+</span> Computing
+
+                </h2>
+
+
+                <p>
+
+                    Building a strong foundation in programming, artificial intelligence and high-performance computing.
+
+                </p>
+
+
+                <div class="focus-items">
+
+
+                    <div class="focus-item">
+
+                        <span>01</span>
+
+                        <strong>Artificial Intelligence</strong>
+
                     </div>
 
-                    <h3>AI + Computing</h3>
+
+                    <div class="focus-item">
+
+                        <span>02</span>
+
+                        <strong>Computer Vision</strong>
+
+                    </div>
+
+
+                    <div class="focus-item">
+
+                        <span>03</span>
+
+                        <strong>Linux</strong>
+
+                    </div>
+
+
+                    <div class="focus-item">
+
+                        <span>04</span>
+
+                        <strong>HPC / GPU Computing</strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="focus-bottom">
+
+                    <span>ECE → AI → COMPUTING</span>
+
+                    <b>●</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        <span></span>
+
+        SCROLL TO EXPLORE
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="section-number">
+
+                01
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+
+                    PROFILE
+
+                </div>
+
+
+                <h2>
+
+                    Electronics meets
+
+                    <em>Computing.</em>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="about-layout">
+
+
+            <div class="about-highlight">
+
+                <div class="mini-label">
+
+                    ABOUT ME
+
+                </div>
+
+
+                <h3>
+
+                    Building at the intersection of
+
+                    <span>electronics</span>,
+
+                    <span>software</span> and
+
+                    <span>AI.</span>
+
+                </h3>
+
+            </div>
+
+
+            <div class="about-copy">
+
+
+                <p>
+
+                    I’m an Electronics and Communication Engineering student interested in the intersection of electronics, software and artificial intelligence.
+
+                </p>
+
+
+                <p>
+
+                    I’m building my foundation in C, C++ and Python through hands-on learning and projects, with a growing interest in Computer Vision and AI-driven solutions.
+
+                </p>
+
+
+                <p>
+
+                    I’m also exploring Linux, High Performance Computing and GPU Computing to understand how modern computing systems are built and optimized.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section class="section dark-section" id="skills">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="section-number">
+
+                02
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+
+                    TECH STACK
+
+                </div>
+
+
+                <h2>
+
+                    Tools I’m
+
+                    <em>building with.</em>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span>PROGRAMMING</span>
+
+                    <b>01</b>
+
+                </div>
+
+
+                <h3>
+
+                    Programming
+
+                </h3>
+
+
+                <div class="tags">
+
+                    <span>C</span>
+
+                    <span>C++</span>
+
+                    <span>Python</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span>AI / VISION</span>
+
+                    <b>02</b>
+
+                </div>
+
+
+                <h3>
+
+                    AI &amp; Computer Vision
+
+                </h3>
+
+
+                <div class="tags">
+
+                    <span>AI</span>
+
+                    <span>Computer Vision</span>
+
+                    <span>YOLO</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span>DEVELOPMENT</span>
+
+                    <b>03</b>
+
+                </div>
+
+
+                <h3>
+
+                    Web Development
+
+                </h3>
+
+
+                <div class="tags">
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>JavaScript</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-header">
+
+                    <span>AI ASSISTED</span>
+
+                    <b>04</b>
+
+                </div>
+
+
+                <h3>
+
+                    AI-Assisted Development
+
+                </h3>
+
+
+                <div class="tags">
+
+                    <span>ChatGPT</span>
+
+                    <span>Claude</span>
+
+                    <span>AI Tools</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECT
+===================================================== -->
+
+<section class="section" id="projects">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="section-number">
+
+                03
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+
+                    SELECTED WORK
+
+                </div>
+
+
+                <h2>
+
+                    Building solutions for
+
+                    <em>real problems.</em>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="project">
+
+
+            <div class="project-info">
+
+
+                <div class="project-meta">
+
+                    <span>
+
+                        COMPUTER VISION • SMART TOURISM
+
+                    </span>
+
+
+                    <span class="project-status">
+
+                        <i></i>
+
+                        CONCEPT
+
+                    </span>
+
+                </div>
+
+
+                <h3>
+
+                    Smart Tourist Crowd Diversion
+
+                </h3>
+
+
+                <p>
+
+                    A computer-vision based smart tourism concept designed to monitor tourist crowd levels and support better crowd distribution across nearby attractions.
+
+                </p>
+
+
+                <p>
+
+                    The project explores real-time people detection, tracking and crowd estimation using existing surveillance infrastructure.
+
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>Python</span>
+
+                    <span>YOLO</span>
+
+                    <span>ByteTrack</span>
+
+                    <span>OpenCV</span>
+
+                    <span>Web Dashboard</span>
+
+                </div>
+
+
+                <a
+                    href="https://github.com/suryavignesh010/Smart-Tourism"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="github-button"
+                >
+
+                    VIEW PROJECT ON GITHUB
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT VISUAL -->
+
+            <div class="project-visual">
+
+
+                <div class="visual-top">
+
+                    <span>VISION SYSTEM</span>
+
+                    <span>AI / CV</span>
+
+                </div>
+
+
+                <div class="vision-box">
+
+
+                    <div class="vision-grid"></div>
+
+
+                    <div class="scan-line"></div>
+
+
+                    <div class="corner c1"></div>
+                    <div class="corner c2"></div>
+                    <div class="corner c3"></div>
+                    <div class="corner c4"></div>
+
+
+                    <div class="human human-1">
+
+                        <div class="head"></div>
+
+                        <div class="body"></div>
+
+                    </div>
+
+
+                    <div class="human human-2">
+
+                        <div class="head"></div>
+
+                        <div class="body"></div>
+
+                    </div>
+
+
+                    <div class="human human-3">
+
+                        <div class="head"></div>
+
+                        <div class="body"></div>
+
+                    </div>
+
+
+                    <div class="human human-4">
+
+                        <div class="head"></div>
+
+                        <div class="body"></div>
+
+                    </div>
+
+
+                    <div class="detection-box box-1">
+
+                        <span>PERSON 01</span>
+
+                    </div>
+
+
+                    <div class="detection-box box-2">
+
+                        <span>PERSON 02</span>
+
+                    </div>
+
+
+                    <div class="detection-box box-3">
+
+                        <span>PERSON 03</span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="visual-bottom">
+
+                    <span>REAL-TIME ANALYSIS</span>
+
+                    <div class="signal">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPLORING
+===================================================== -->
+
+<section class="section dark-section" id="exploring">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="section-number">
+
+                04
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+
+                    CURRENTLY LEARNING
+
+                </div>
+
+
+                <h2>
+
+                    Exploring what’s
+
+                    <em>next.</em>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="explore-grid">
+
+
+            <div class="explore-card">
+
+                <span>01</span>
+
+                <div>
+
+                    <h3>Linux</h3>
 
                     <p>
-                        Building a strong foundation in programming,
-                        artificial intelligence and high-performance
-                        computing.
+
+                        Building a stronger foundation in Linux systems and command-line environments.
+
                     </p>
 
-                    <div class="focus-list">
-
-                        <div>
-                            <span>01</span>
-                            <strong>Artificial Intelligence</strong>
-                        </div>
-
-                        <div>
-                            <span>02</span>
-                            <strong>Computer Vision</strong>
-                        </div>
-
-                        <div>
-                            <span>03</span>
-                            <strong>Linux</strong>
-                        </div>
-
-                        <div>
-                            <span>04</span>
-                            <strong>HPC / GPU Computing</strong>
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
-        </section>
 
 
-        <!-- ABOUT -->
-        <section class="section" id="about">
 
-            <div class="container">
+            <div class="explore-card">
 
-                <div class="section-heading">
-                    <span>01</span>
-                    <h2>About Me</h2>
-                </div>
+                <span>02</span>
 
-                <div class="about-grid">
+                <div>
 
-                    <div class="about-intro">
-                        <h3>
-                            Electronics meets
-                            <span>Computing.</span>
-                        </h3>
-                    </div>
+                    <h3>HPC</h3>
 
-                    <div class="about-text">
+                    <p>
 
-                        <p>
-                            I’m an Electronics and Communication Engineering
-                            student interested in the intersection of
-                            electronics, software and artificial intelligence.
-                        </p>
+                        Learning the fundamentals of High Performance Computing and parallel workloads.
 
-                        <p>
-                            I’m building my foundation in C, C++ and Python
-                            through hands-on learning and projects, with a
-                            growing interest in Computer Vision and
-                            AI-driven solutions.
-                        </p>
-
-                        <p>
-                            I’m also exploring Linux, High Performance
-                            Computing and GPU Computing to understand how
-                            modern computing systems are built and optimized.
-                        </p>
-
-                    </div>
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
 
 
-        <!-- SKILLS -->
-        <section class="section section-dark" id="skills">
+            <div class="explore-card">
 
-            <div class="container">
+                <span>03</span>
 
-                <div class="section-heading">
-                    <span>02</span>
-                    <h2>Skills & Technologies</h2>
-                </div>
+                <div>
 
-                <div class="skills-grid">
+                    <h3>GPU Computing</h3>
 
-                    <div class="skill-card">
+                    <p>
 
-                        <span class="skill-number">01</span>
+                        Exploring GPU-based computing and accelerated workloads.
 
-                        <h3>Programming</h3>
-
-                        <div class="tags">
-                            <span>C</span>
-                            <span>C++</span>
-                            <span>Python</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">02</span>
-
-                        <h3>AI & Computer Vision</h3>
-
-                        <div class="tags">
-                            <span>AI</span>
-                            <span>Computer Vision</span>
-                            <span>YOLO</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">03</span>
-
-                        <h3>Web Development</h3>
-
-                        <div class="tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">04</span>
-
-                        <h3>AI-Assisted Development</h3>
-
-                        <div class="tags">
-                            <span>ChatGPT</span>
-                            <span>Claude</span>
-                            <span>AI Tools</span>
-                        </div>
-
-                    </div>
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
 
 
-        <!-- PROJECTS -->
-        <section class="section" id="projects">
+            <div class="explore-card">
 
-            <div class="container">
+                <span>04</span>
 
-                <div class="section-heading">
-                    <span>03</span>
-                    <h2>Featured Project</h2>
-                </div>
+                <div>
 
-                <div class="project-card">
+                    <h3>Advanced Computing</h3>
 
-                    <div class="project-top">
+                    <p>
 
-                        <div>
-                            <p class="project-label">
-                                COMPUTER VISION • SMART TOURISM
-                            </p>
+                        Understanding modern computing architectures and performance-focused technologies.
 
-                            <h3>
-                                Smart Tourist
-                                <span>Crowd Diversion</span>
-                            </h3>
-                        </div>
-
-                        <a
-                            href="https://github.com/suryavignesh010/Smart-Tourism"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            GitHub ↗
-                        </a>
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <p>
-                            A computer-vision based smart tourism concept
-                            designed to monitor tourist crowd levels and
-                            support better crowd distribution across nearby
-                            attractions.
-                        </p>
-
-                        <p>
-                            The project explores real-time people detection,
-                            tracking and crowd estimation using existing
-                            surveillance infrastructure.
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-tech">
-
-                        <span>Python</span>
-                        <span>YOLO</span>
-                        <span>ByteTrack</span>
-                        <span>OpenCV</span>
-                        <span>Web Dashboard</span>
-
-                    </div>
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
+
+        </div>
 
 
-        <!-- EXPLORING -->
-        <section class="section section-dark" id="exploring">
 
-            <div class="container">
+        <div class="direction">
 
-                <div class="section-heading">
-                    <span>04</span>
-                    <h2>Currently Exploring</h2>
-                </div>
+            <span>DIRECTION</span>
 
 
-                <div class="exploring-grid">
+            <div class="direction-line">
 
-                    <div class="explore-item">
-                        <span>01</span>
-                        <h3>Linux</h3>
-                        <p>
-                            Building a stronger foundation in Linux systems
-                            and command-line environments.
-                        </p>
-                    </div>
+                <strong>ECE</strong>
 
+                <i>→</i>
 
-                    <div class="explore-item">
-                        <span>02</span>
-                        <h3>HPC</h3>
-                        <p>
-                            Learning the fundamentals of High Performance
-                            Computing and parallel workloads.
-                        </p>
-                    </div>
+                <strong>Programming</strong>
 
+                <i>→</i>
 
-                    <div class="explore-item">
-                        <span>03</span>
-                        <h3>GPU Computing</h3>
-                        <p>
-                            Exploring GPU-based computing and accelerated
-                            workloads.
-                        </p>
-                    </div>
+                <strong>AI</strong>
 
+                <i>→</i>
 
-                    <div class="explore-item">
-                        <span>04</span>
-                        <h3>Advanced Computing</h3>
-                        <p>
-                            Understanding modern computing architectures
-                            and performance-focused technologies.
-                        </p>
-                    </div>
+                <strong>Linux</strong>
 
-                </div>
+                <i>→</i>
 
+                <strong>HPC / GPU</strong>
 
-                <div class="direction">
-
-                    <span>MY DIRECTION</span>
-
-                    <div class="direction-line">
-                        <strong>ECE</strong>
-                        <b>→</b>
-                        <strong>Programming</strong>
-                        <b>→</b>
-                        <strong>AI</strong>
-                        <b>→</b>
-                        <strong>Linux</strong>
-                        <b>→</b>
-                        <strong>HPC / GPU</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-        <section class="section contact-section" id="contact">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <span>05</span>
-                    <h2>Let’s Connect</h2>
-                </div>
-
-                <div class="contact-grid">
-
-                    <div class="contact-intro">
-
-                        <h3>
-                            Open to learning,
-                            <span>building & connecting.</span>
-                        </h3>
-
-                        <p>
-                            I’m continuously learning and working on
-                            projects that help me grow across electronics,
-                            software and AI.
-                        </p>
-
-                    </div>
-
-
-                    <div class="contact-links">
-
-                        <a
-                            href="mailto:suryavignesh010@gmail.com"
-                            class="contact-row"
-                        >
-                            <div>
-                                <small>EMAIL</small>
-                                <strong>suryavignesh010@gmail.com</strong>
-                            </div>
-
-                            <span>↗</span>
-                        </a>
-
-
-                        <a
-                            href="https://github.com/suryavignesh010/Smart-Tourism"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="contact-row"
-                        >
-                            <div>
-                                <small>GITHUB PROJECT</small>
-                                <strong>SmartTourism</strong>
-                            </div>
-
-                            <span>↗</span>
-                        </a>
-
-
-                        <a
-                            href="https://www.linkedin.com/in/suryavignesh010/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="contact-row"
-                        >
-                            <div>
-                                <small>LINKEDIN</small>
-                                <strong>suryavignesh010</strong>
-                            </div>
-
-                            <span>↗</span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="container footer-container">
-
-            <div class="footer-logo">
-                SV.
-            </div>
-
-            <div class="footer-text">
-                Electronics • AI • Computing
-            </div>
-
-            <div class="footer-copy">
-                © <span id="year"></span> Surya Vignesh
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
 
 
-    <script src="script.js"></script>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="section-number">
+
+                05
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+
+                    GET IN TOUCH
+
+                </div>
+
+
+                <h2>
+
+                    Open to learning,
+
+                    <em>building &amp; connecting.</em>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-text">
+
+                <p>
+
+                    I’m continuously learning and working on projects that help me grow across electronics, software and AI.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-links">
+
+
+                <a
+                    href="mailto:suryavignesh010@gmail.com"
+                    class="contact-item"
+                >
+
+                    <span>EMAIL</span>
+
+                    <strong>
+
+                        suryavignesh010@gmail.com
+
+                    </strong>
+
+                    <b>↗</b>
+
+                </a>
+
+
+                <a
+                    href="https://github.com/suryavignesh010/Smart-Tourism"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-item"
+                >
+
+                    <span>GITHUB PROJECT</span>
+
+                    <strong>
+
+                        SmartTourism
+
+                    </strong>
+
+                    <b>↗</b>
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/suryavignesh010/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-item"
+                >
+
+                    <span>LINKEDIN</span>
+
+                    <strong>
+
+                        suryavignesh010
+
+                    </strong>
+
+                    <b>↗</b>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-logo">
+
+            SV<span>.</span>
+
+        </div>
+
+
+        <div>
+
+            Electronics • AI • Computing
+
+        </div>
+
+
+        <div>
+
+            © <span id="year"></span> Surya Vignesh
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
